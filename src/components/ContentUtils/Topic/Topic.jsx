@@ -29,7 +29,6 @@ function Topic({ value }) {
         </AccordionSummary>
         <AccordionDetails>
           {topicElements?.map((item, index) => {
-            console.log(item);
             const elementKey = Object.keys(item)[0];
             const elementValue = item[elementKey];
             return renderElement(elementKey, elementValue, index);
