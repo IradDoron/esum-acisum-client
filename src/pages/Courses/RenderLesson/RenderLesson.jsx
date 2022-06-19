@@ -15,9 +15,6 @@ function RenderLesson() {
 
   return (
     <div>
-      <h2>Lesson title: {lessonData?.title}</h2>
-      <h2>Lesson description: {lessonData?.description}</h2>
-      <h2>Topics:</h2>
       <div>
         {lessonData?.lessonElements?.map((element, index) => {
           const elementName = Object.keys(element)[0];

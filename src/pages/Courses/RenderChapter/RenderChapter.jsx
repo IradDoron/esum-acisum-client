@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import courses from '../../../data/courses/courses';
 import { NavLink, Outlet } from 'react-router-dom';
+import CourseLessonsNav from '../CourseLessonsNav/CourseLessonsNav';
 
 function RenderChapter() {
   const params = useParams();
@@ -13,20 +14,7 @@ function RenderChapter() {
 
   return (
     <div>
-      <h2>chapter title: {chapterData?.title}</h2>
-      <h2>chapter description: {chapterData?.description}</h2>
-      <h2>Lessons:</h2>
-      <nav>
-        <ul>
-          {chapterData?.lessons?.map((lesson, index) => {
-            return (
-              <li key={index}>
-                <NavLink to={`lesson-${index}`}>{`שיעור מספר ${index} - ${lesson.lessonTitle}`}</NavLink>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
+      <CourseLessonsNav lessonsArray={chapterData?.lessons} />
       <Outlet />
     </div>
   );
