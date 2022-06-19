@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import courses from '../../../data/courses/courses';
 import { NavLink, Outlet } from 'react-router-dom';
+import { Stack, Typography, Button, Divider, Portal } from '@mui/material';
 
 import renderElements from '../../../helpers/renderElement';
 
@@ -14,15 +15,13 @@ function RenderLesson() {
   }, [lesson, chapter]);
 
   return (
-    <div>
-      <div>
-        {lessonData?.lessonElements?.map((element, index) => {
-          const elementName = Object.keys(element)[0];
-          const elementData = element[elementName];
-          return renderElements(elementName, elementData, index);
-        })}
-      </div>
-    </div>
+    <Stack direction="column" sx={{ alignItems: 'center' }}>
+      {lessonData?.lessonElements?.map((element, index) => {
+        const elementName = Object.keys(element)[0];
+        const elementData = element[elementName];
+        return renderElements(elementName, elementData, index);
+      })}
+    </Stack>
   );
 }
 export default RenderLesson;
