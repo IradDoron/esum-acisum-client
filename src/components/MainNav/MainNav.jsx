@@ -9,7 +9,7 @@ const links = [
   { Courses: 'קורסים' },
   { Forum: 'פורום' },
   { Games: 'משחקים' },
-  { Improvisation: 'הפעלה' },
+  { Improvisation: 'אלתור' },
   { Library: 'ספרייה' },
   { Personal: 'אישי' },
   { Theory: 'תיאור' },
