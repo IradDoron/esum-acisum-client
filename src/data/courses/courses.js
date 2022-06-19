@@ -1,13 +1,14 @@
 const courses = {
   course1: {
     courseTitle: 'יסודות הנגינה בפסנתר - חלק 1',
+    courseUrlName: 'course1',
     thumbSvg: (
       <svg height="100" width="100">
         <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
         Sorry, your browser does not support inline SVG.
       </svg>
     ),
-    description: 'הצעדים הראשונים בנגינה בפסנתר',
+    courseDescription: 'הצעדים הראשונים בנגינה בפסנתר',
     price: 'my price',
     duration: 'my duration',
     level: 'מתחילים',
@@ -4112,6 +4113,24 @@ const courses = {
         ],
       },
     ],
+  },
+  course2: {
+    courseTitle: 'יסודות הנגינה בפסנתר - חלק 2',
+    courseUrlName: 'course2',
+    thumbSvg: (
+      <svg height="100" width="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+        Sorry, your browser does not support inline SVG.
+      </svg>
+    ),
+    courseDescription: 'נחזק את טכניקות הליווי בשתי הידיים ונלמד עוד תווים באוקטבה השנייה',
+    price: 'my price',
+    duration: 'my duration',
+    level: 'מתחילים',
+    tags: ['my tag1', 'my tag2'],
+    chaptersCount: 'my chapterCount',
+    courseId: 'my courseId',
+    lessonsCount: 'my lessonsCount',
   },
 };
 

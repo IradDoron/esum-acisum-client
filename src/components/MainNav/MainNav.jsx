@@ -19,7 +19,7 @@ const links = [
 function MainNav() {
   return (
     <nav>
-      <Stack direction="row">
+      <Stack direction="row" sx={{ flexWrap: 'wrap' }}>
         {links.map((link) => (
           <NavLink
             key={Object.keys(link)[0]}

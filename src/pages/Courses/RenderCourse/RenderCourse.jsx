@@ -2,21 +2,27 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import courses from '../../../data/courses/courses';
 import { NavLink, Outlet } from 'react-router-dom';
+import { Stack, Typography } from '@mui/material';
 
 function RenderCourse() {
   const params = useParams();
   const { course, chapter, lesson, topic } = params;
   const [courseData, setCourseData] = useState(null);
+  //const { courseTitle, courseDescription, chapters } = courseData;
+  console.log(courseData);
   useEffect(() => {
-    if (courseData === null) {
-      setCourseData(courses[course]);
-    }
-  }, [courseData]);
+    setCourseData(courses[course]);
+  }, [course]);
 
   return (
     <div>
-      <h2>course title: {courseData?.courseTitle}</h2>
-      <h2>course description: {courseData?.description}</h2>
+      <Stack direction="row" sx={{ flexWrap: 'wrap', margin: '50px 0', display: 'flex', justifyContent: 'center' }}>
+        <Typography variant="h2">{courseData?.courseTitle}</Typography>
+      </Stack>
+      <Stack direction="row" sx={{ flexWrap: 'wrap', margin: '50px 0', display: 'flex', justifyContent: 'center' }}>
+        <Typography variant="h3">{courseData?.courseDescription}</Typography>
+      </Stack>
+
       <h2>Chapters:</h2>
       <nav>
         <ul>

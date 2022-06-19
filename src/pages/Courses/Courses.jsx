@@ -2,6 +2,11 @@ import { useState } from 'react';
 
 import { NavLink, Outlet } from 'react-router-dom';
 
+import CourseEntering from './CourseEntering/CourseEntering';
+import CourseHeader from './CourseHeader/CourseHeader';
+
+import { Stack } from '@mui/material';
+
 // import data
 import courses from '../../data/courses/courses';
 
@@ -9,16 +14,12 @@ function Courses() {
   const [coursesList, setCoursesList] = useState(Object.keys(courses));
   return (
     <div>
-      <h1>Courses</h1>
-      <ul>
+      <CourseHeader />
+      <Stack direction="flex">
         {coursesList.map((course) => {
-          return (
-            <li key={course}>
-              <NavLink to={`/courses/${course}`}>{course}</NavLink>
-            </li>
-          );
+          return <CourseEntering key={course} course={course} />;
         })}
-      </ul>
+      </Stack>
       <Outlet />
     </div>
   );
