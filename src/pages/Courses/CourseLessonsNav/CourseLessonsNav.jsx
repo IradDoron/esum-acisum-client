@@ -7,14 +7,11 @@ import { useEffect, useState } from 'react';
 function CourseLessonsNav({ lessonsArray }) {
   const params = useParams();
   const { course, chapter, lesson, topic } = params;
-  const [isShowChapters, setIsShowChapters] = useState(false);
+  const [isShowChapters, setIsShowChapters] = useState(true);
   function handleClick() {
     setIsShowChapters(!isShowChapters);
   }
 
-  useEffect(() => {
-    setIsShowChapters(false);
-  }, [lesson]);
   return (
     <>
       <Box>
