@@ -4,6 +4,9 @@ import { Routes, Route } from 'react-router-dom';
 import Home from '../../pages/Home/Home';
 import Composition from '../../pages/Composition/Composition';
 import Courses from '../../pages/Courses/Courses';
+import RenderCourse from '../../pages/Courses/RenderCourse/RenderCourse';
+import RenderChapter from '../../pages/Courses/RenderChapter/RenderChapter';
+import RenderLesson from '../../pages/Courses/RenderLesson/RenderLesson';
 import Forum from '../../pages/Forum/Forum';
 import Games from '../../pages/Games/Games';
 import Improvisation from '../../pages/Improvisation/Improvisation';
@@ -18,7 +21,13 @@ function Routing() {
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/composition" element={<Composition />} />
-      <Route path="/courses" element={<Courses />} />
+      <Route path="/courses" element={<Courses />}>
+        <Route path="/courses/:course" element={<RenderCourse />}>
+          <Route path="/courses/:course/:chapter" element={<RenderChapter />}>
+            <Route path="/courses/:course/:chapter/:lesson" element={<RenderLesson />} />
+          </Route>
+        </Route>
+      </Route>
       <Route path="/forum" element={<Forum />} />
       <Route path="/games" element={<Games />} />
       <Route path="/improvisation" element={<Improvisation />} />

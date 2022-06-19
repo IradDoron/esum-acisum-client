@@ -1,0 +1,31 @@
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import courses from '../../../data/courses/courses';
+import { NavLink, Outlet } from 'react-router-dom';
+
+import renderElements from '../../../helpers/renderElement';
+
+function RenderLesson() {
+  const params = useParams();
+  const { course, chapter, lesson } = params;
+  const [lessonData, setLessonData] = useState(null);
+  useEffect(() => {
+    setLessonData(courses[course].chapters[Number(chapter?.split('-')[1])].lessons[Number(lesson?.split('-')[1])]);
+  }, [lesson, chapter]);
+
+  return (
+    <div>
+      <h2>Lesson title: {lessonData?.title}</h2>
+      <h2>Lesson description: {lessonData?.description}</h2>
+      <h2>Topics:</h2>
+      <div>
+        {lessonData?.lessonElements?.map((element, index) => {
+          const elementName = Object.keys(element)[0];
+          const elementData = element[elementName];
+          return renderElements(elementName, elementData, index);
+        })}
+      </div>
+    </div>
+  );
+}
+export default RenderLesson;

@@ -21,11 +21,13 @@ function MainNav() {
     <nav>
       <Stack direction="row">
         {links.map((link) => (
-          <Button key={Object.keys(link)[0]} variant="outlined">
-            <NavLink style={{ textDecoration: 'none', color: 'inherit' }} to={`/${Object.keys(link)[0].toLowerCase()}`}>
-              {Object.values(link)[0]}
-            </NavLink>
-          </Button>
+          <NavLink
+            key={Object.keys(link)[0]}
+            style={{ textDecoration: 'none', color: 'inherit' }}
+            to={`/${Object.keys(link)[0].toLowerCase()}`}
+          >
+            <Button variant="outlined">{Object.values(link)[0]}</Button>
+          </NavLink>
         ))}
       </Stack>
     </nav>
