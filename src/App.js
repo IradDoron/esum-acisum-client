@@ -1,7 +1,12 @@
 import Routing from './components/Routing/Routing';
 import MainNav from './components/MainNav/MainNav';
 
+import { createContext, useContext } from 'react';
+
 import { Box, Stack } from '@mui/material';
+
+import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
+const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 const bg = {
   bg1: 'linear-gradient(17deg, rgba(131,58,180,0.2) 0%, rgba(49,135,224,0.2) 50%, rgba(130,69,252,0.2) 100%)',
@@ -14,6 +19,9 @@ const bg = {
 };
 
 function App() {
+  const theme = useTheme();
+  const colorMode = useContext(ColorModeContext);
+
   return (
     <>
       <Box
