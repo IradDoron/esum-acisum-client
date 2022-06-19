@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import courses from '../../../data/courses/courses';
 import { NavLink, Outlet } from 'react-router-dom';
 import CourseLessonsNav from '../CourseLessonsNav/CourseLessonsNav';
+import { Typography } from '@mui/material';
 
 function RenderChapter() {
   const params = useParams();

@@ -19,6 +19,8 @@ function CourseChaptersNav({ chaptersArray }) {
   return (
     <>
       <Box sx={{ margin: '40px 0' }}>
+        <Typography>{chaptersArray?.[Number(chapter?.split('-')[1])]?.chapterTitle}</Typography>
+
         <Button variant="outlined" onClick={handleClick}>
           {isShowChapters ? (
             <Typography variant="h5">הסתר פרקים</Typography>
