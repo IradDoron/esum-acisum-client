@@ -4152,6 +4152,7 @@ const courses = {
     chaptersCount: 'my chapterCount',
     courseId: 'my courseId',
     lessonsCount: 'my lessonsCount',
+    chapters: [],
   },
 };
 

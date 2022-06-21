@@ -36,9 +36,9 @@ function RenderCourse() {
           <CourseChaptersNav chaptersArray={courseData?.chapters} />
         </AccordionDetails>
       </Accordion>
-      {/* <Typography variant="h4">{`${'פרק'}${' '}${chapter?.split('-')[1]}${' - '}${
+      <Typography variant="h4">{`${'פרק'}${' '}${chapter?.split('-')[1]}${' - '}${
         courseData?.chapters[Number(chapter?.split('-')[1])]?.chapterTitle
-      }`}</Typography> */}
+      }`}</Typography>
       <Outlet />
     </div>
   );
