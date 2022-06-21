@@ -76,7 +76,6 @@ function MainNav() {
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
   function handleToggleClick() {
-    console.log('toggle');
     colorMode.toggleColorMode();
     console.log(theme);
   }
