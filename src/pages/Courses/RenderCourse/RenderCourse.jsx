@@ -7,6 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import CourseChaptersNav from '../CourseChaptersNav/CourseChaptersNav';
 import CourseLessonsNav from '../CourseLessonsNav/CourseLessonsNav';
+import NavButtons from '../NavButtons/NavButtons';
 
 function RenderCourse() {
   const params = useParams();
@@ -64,8 +65,9 @@ function RenderCourse() {
               ?.lessonDescription}
         </Typography>
       </Paper>
-
+      <NavButtons />
       <Outlet />
+      <NavButtons />
     </div>
   );
 }

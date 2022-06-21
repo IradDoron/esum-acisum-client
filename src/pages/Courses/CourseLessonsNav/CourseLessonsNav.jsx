@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Stack, Typography, Button, Divider, Box } from '@mui/material';
+import { Stack, Typography, Button, Divider, Box, Paper } from '@mui/material';
 import { NavLink, Outlet } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -14,7 +14,7 @@ function CourseLessonsNav({ lessonsArray }) {
 
   return (
     <>
-      <Box>
+      <Paper variant="outlined">
         {isShowChapters ? (
           <Stack component="nav" sx={{ maxHeight: '200px', overflow: 'scroll' }}>
             {lessonsArray?.map((lesson, index) => {
@@ -30,7 +30,7 @@ function CourseLessonsNav({ lessonsArray }) {
             })}
           </Stack>
         ) : null}
-      </Box>
+      </Paper>
     </>
   );
 }
