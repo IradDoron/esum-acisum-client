@@ -51,6 +51,13 @@ const customTheme = {
       bgGradient: bgGradients.bg1,
       background: { ...initThemes.light.palette.background, paper: '#fafaff' },
     },
+    typography: {
+      ...initThemes.light.typography,
+      body1: {
+        ...initThemes.light.typography.body1,
+        fontSize: '1.5rem',
+      },
+    },
   },
   dark: {
     ...initThemes.dark,
@@ -61,6 +68,8 @@ const customTheme = {
     },
   },
 };
+
+console.log(customTheme);
 
 function App() {
   const [mode, setMode] = useState('light');

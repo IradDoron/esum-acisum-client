@@ -12,6 +12,7 @@ function Para({ children, isItem }) {
 
   return (
     <Typography
+      variant="body1"
       sx={{
         textAlign: 'start',
         width: '100%',
