@@ -20,9 +20,9 @@ const bgGradients = {
   )`,
   bg3: `linear-gradient(
     17deg,
-    rgba(101, 40, 142, 0.7651435574229692) 0%,
-    rgba(5, 8, 61, 0.9472163865546218) 50%,
-    rgba(3, 3, 46, 0.8645833333333334) 100%
+    rgba(101, 40, 142, 0.4) 0%,
+    rgba(5, 8, 61, 0.4) 50%,
+    rgba(3, 3, 46, 0.4) 100%
   )`,
 };
 
@@ -62,6 +62,7 @@ function App() {
           <Box
             sx={{
               backgroundImage: theme.palette.bgGradient,
+              backgroundColor: 'background.default',
               color: 'text.primary',
               height: '100%',
               minHeight: '100vh',
