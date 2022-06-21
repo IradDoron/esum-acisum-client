@@ -20,12 +20,12 @@ const courses = {
       // chapter - פרולוג
       {
         chapterTitle: 'פרולוג',
-        description: 'my chapter description',
+        chapterDescription: 'my chapter description',
         tags: ['my chapter tag1', 'my chapter tag2'],
         lessons: [
           {
             lessonTitle: 'דברי פתיחה',
-            description: 'my lesson description',
+            lessonDescription: 'my lesson description',
             tags: ['my lesson tag1', 'my lesson tag2'],
             lessonElements: [
               {

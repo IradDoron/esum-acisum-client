@@ -2,6 +2,7 @@ import { Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 function Para({ children, isItem }) {
+  // maybe delete this
   const [marginAmount, setMarginAmount] = useState(3);
   useEffect(() => {
     if (isItem) {
@@ -11,15 +12,10 @@ function Para({ children, isItem }) {
 
   return (
     <Typography
-      m={1}
-      mr={marginAmount}
       sx={{
-        fontSize: 20,
-        position: 'relative',
         textAlign: 'start',
         width: '100%',
-        maxWidth: '700px',
-        margin: '12px 0',
+        margin: '24px 0',
       }}
     >
       {children}

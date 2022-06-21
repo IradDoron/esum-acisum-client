@@ -16,17 +16,6 @@ function RenderChapter() {
 
   return (
     <div>
-      <Accordion>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography variant="h6">רשימת שיעורים</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <CourseLessonsNav lessonsArray={chapterData?.lessons} />
-        </AccordionDetails>
-      </Accordion>
-      <Typography variant="h4">{`${'שיעור'}${' '}${lesson.split('-')[1]}${' - '}${
-        chapterData?.lessons[Number(lesson.split('-')[1])]?.lessonTitle
-      }`}</Typography>
       <Outlet />
     </div>
   );

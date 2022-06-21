@@ -19,7 +19,7 @@ function CourseLessonsNav({ lessonsArray }) {
           <Stack component="nav" sx={{ maxHeight: '200px', overflow: 'scroll' }}>
             {lessonsArray?.map((lesson, index) => {
               return (
-                <NavLink key={index} to={`lesson-${index}`} style={{ textDecoration: 'none' }}>
+                <NavLink key={index} to={`${chapter}/lesson-${index}`} style={{ textDecoration: 'none' }}>
                   <Button color="secondary">
                     <Typography>{`שיעור ${index}`}</Typography>
                     <Divider orientation="vertical" flexItem sx={{ margin: '0 10px', backgroundColor: 'inherit' }} />

@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { useEffect, useState } from 'react';
+import { Stack } from '@mui/material';
 
 function Topic({ value }) {
   const [expanded, setExpanded] = useState(true);
@@ -17,11 +18,7 @@ function Topic({ value }) {
 
   return (
     <>
-      <Accordion
-        sx={{ width: '100%', maxWidth: '900px', margin: '12px 0', padding: '5px' }}
-        expanded={expanded}
-        onChange={handleChange}
-      >
+      <Accordion sx={{ width: '100%', margin: '12px 0', padding: '5px' }} expanded={expanded} onChange={handleChange}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography sx={{ textAlign: 'center', width: '100%' }} variant="h4">
             {topicTitle}
