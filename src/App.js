@@ -42,8 +42,6 @@ const customTheme = {
   dark: { ...initThemes.dark, palette: { ...initThemes.dark.palette, bgGradient: bgGradients.bg3 } },
 };
 
-console.log(customTheme);
-
 function App() {
   const [mode, setMode] = useState('light');
   const colorMode = useMemo(
