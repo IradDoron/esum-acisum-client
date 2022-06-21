@@ -62,7 +62,6 @@ function App() {
           <Box
             sx={{
               backgroundImage: theme.palette.bgGradient,
-              backgroundColor: 'background.default',
               color: 'text.primary',
               height: '100%',
               minHeight: '100vh',
