@@ -105,7 +105,7 @@ function MainNav() {
             style={{ textDecoration: 'none', color: 'inherit' }}
             to={`/${Object.keys(link)[0].toLowerCase()}`}
           >
-            <Button variant="outlined">{Object.values(link)[0]}</Button>
+            <Button variant="text">{Object.values(link)[0]}</Button>
           </NavLink>
         ))}
       </Stack>
