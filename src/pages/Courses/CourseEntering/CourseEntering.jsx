@@ -5,7 +5,7 @@ import { Card, CardContent, CardActions, Button, Typography, Grid } from '@mui/m
 function CourseEntering({ course }) {
   const { courseUrlName, courseTitle, courseDescription } = courses[course];
   return (
-    <Grid item xs={12} lg={6}>
+    <Grid item xs={12} md={6}>
       <Card sx={{ maxWidth: '400px', height: '300px' }}>
         <CardContent>
           <Typography variant="h1" sx={{ fontSize: '3rem' }}>
