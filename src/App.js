@@ -5,7 +5,7 @@ import { createContext, useContext, useState, useMemo } from 'react';
 
 import { Box, Stack } from '@mui/material';
 
-import { useTheme, ThemeProvider, createTheme } from '@mui/material';
+import { useTheme, ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material';
 import { amber, deepOrange, grey } from '@mui/material/colors';
 
 export const ColorModeContext = createContext();
@@ -37,11 +37,13 @@ function App() {
     []
   );
 
-  const theme = createTheme({
+  let theme = createTheme({
     palette: {
       mode,
     },
   });
+
+  theme = responsiveFontSizes(theme);
 
   return (
     <>
