@@ -15,11 +15,15 @@ function RenderCourse() {
 
   return (
     <div>
-      <Stack sx={{ flexWrap: 'wrap', margin: '50px 0', display: 'flex', justifyContent: 'center' }}>
-        <Typography variant="h2">{courseData?.courseTitle}</Typography>
+      <Stack sx={{ flexWrap: 'wrap' }}>
+        <Typography sx={{ textAlign: 'center' }} variant="h2">
+          {courseData?.courseTitle}
+        </Typography>
       </Stack>
-      <Stack sx={{ flexWrap: 'wrap', margin: '50px 0', display: 'flex', justifyContent: 'center' }}>
-        <Typography variant="h3">{courseData?.courseDescription}</Typography>
+      <Stack sx={{ flexWrap: 'wrap' }}>
+        <Typography sx={{ textAlign: 'center' }} variant="h3">
+          {courseData?.courseDescription}
+        </Typography>
       </Stack>
       <CourseChaptersNav chaptersArray={courseData?.chapters} />
       <Outlet />

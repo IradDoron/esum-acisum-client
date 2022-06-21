@@ -5,7 +5,7 @@ import { createContext, useContext, useState, useMemo } from 'react';
 
 import { Box, Stack } from '@mui/material';
 
-import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
+import { useTheme, ThemeProvider, createTheme } from '@mui/material';
 import { amber, deepOrange, grey } from '@mui/material/colors';
 
 export const ColorModeContext = createContext();
@@ -58,7 +58,9 @@ function App() {
           >
             <Stack direction="column" sx={{ alignItems: 'center' }}>
               <MainNav />
-              <Routing />
+              <Stack sx={{ maxWidth: '1200px', width: '80%' }}>
+                <Routing />
+              </Stack>
             </Stack>
           </Box>
         </ThemeProvider>
