@@ -6,7 +6,7 @@ function CourseEntering({ course }) {
   const { courseUrlName, courseTitle, courseDescription } = courses[course];
   return (
     <Grid item xs={12} md={6} sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-      <Card sx={{ maxWidth: '400px', height: '300px' }}>
+      <Card sx={{ minHeight: '300px' }}>
         <CardContent>
           <Typography variant="h1" sx={{ fontSize: '3rem' }}>
             {courseTitle}
