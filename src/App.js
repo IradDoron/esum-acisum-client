@@ -66,6 +66,13 @@ const customTheme = {
       bgGradient: bgGradients.bg4,
       background: { ...initThemes.dark.palette.background, paper: '#141421' },
     },
+    typography: {
+      ...initThemes.dark.typography,
+      body1: {
+        ...initThemes.dark.typography.body1,
+        fontSize: '1.5rem',
+      },
+    },
   },
 };
 
