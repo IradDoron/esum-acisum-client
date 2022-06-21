@@ -23,6 +23,7 @@ function NavButtons() {
   function handleClick(chapterIndex, chapterJump, lessonIndex, lessonJump) {
     const newChapter = `${'chapter'}${'-'}${chapterIndex + chapterJump}`;
     const newLesson = `${'lesson'}${'-'}${lessonIndex + lessonJump}`;
+    window.scrollTo({ top: 520, behavior: 'smooth' });
 
     if (lessonJump) {
       navigate(`${newChapter}/${newLesson}`);
