@@ -1,11 +1,16 @@
 import { NavLink } from 'react-router-dom';
 
 // import from mui
-import { Button, Stack, Divider } from '@mui/material';
+import { Button, Stack, Divider, useTheme, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+
+import { ColorModeContext } from '../../App';
+import { useContext } from 'react';
 
 const links = [
   { Home: 'בית' },
@@ -68,32 +73,43 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 function MainNav() {
+  const theme = useTheme();
+  const colorMode = useContext(ColorModeContext);
+  function handleToggleClick() {
+    console.log('toggle');
+    colorMode.toggleColorMode();
+    console.log(theme);
+  }
   return (
-    <Stack
-      component="nav"
-      direction="row"
-      sx={{
-        flexWrap: 'wrap',
-        position: 'sticky',
-        top: 0,
-        border: 'solid',
-        width: '100%',
-        zIndex: '1',
-        backgroundColor: '#fff',
-      }}
-    >
-      <FormControlLabel control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />} />
-      <Divider />
-      {links.map((link) => (
-        <NavLink
-          key={Object.keys(link)[0]}
-          style={{ textDecoration: 'none', color: 'inherit' }}
-          to={`/${Object.keys(link)[0].toLowerCase()}`}
-        >
-          <Button variant="outlined">{Object.values(link)[0]}</Button>
-        </NavLink>
-      ))}
-    </Stack>
+    <>
+      <Stack
+        component="nav"
+        direction="row"
+        sx={{
+          flexWrap: 'wrap',
+          position: 'sticky',
+          top: 0,
+          border: 'solid',
+          width: '100%',
+          zIndex: '1',
+          bgcolor: 'background.default',
+        }}
+      >
+        <IconButton onClick={handleToggleClick} color="inherit">
+          {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+        </IconButton>
+        <Divider />
+        {links.map((link) => (
+          <NavLink
+            key={Object.keys(link)[0]}
+            style={{ textDecoration: 'none', color: 'inherit' }}
+            to={`/${Object.keys(link)[0].toLowerCase()}`}
+          >
+            <Button variant="outlined">{Object.values(link)[0]}</Button>
+          </NavLink>
+        ))}
+      </Stack>
+    </>
   );
 }
 
