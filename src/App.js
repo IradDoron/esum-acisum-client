@@ -24,6 +24,12 @@ const bgGradients = {
     rgba(5, 8, 61, 0.4) 50%,
     rgba(3, 3, 46, 0.4) 100%
   )`,
+  bg4: `linear-gradient(
+    17deg,
+    rgba(15, 4, 76, 0.4) 0%,
+    rgba(19, 17, 85, 0.4) 50%,
+    rgba(20, 30, 97, 0.4) 100%
+  )`,
 };
 
 const initThemes = {
@@ -38,8 +44,22 @@ const initThemes = {
 };
 
 const customTheme = {
-  light: { ...initThemes.light, palette: { ...initThemes.light.palette, bgGradient: bgGradients.bg1 } },
-  dark: { ...initThemes.dark, palette: { ...initThemes.dark.palette, bgGradient: bgGradients.bg3 } },
+  light: {
+    ...initThemes.light,
+    palette: {
+      ...initThemes.light.palette,
+      bgGradient: bgGradients.bg1,
+      background: { ...initThemes.light.palette.background, paper: '#fafaff' },
+    },
+  },
+  dark: {
+    ...initThemes.dark,
+    palette: {
+      ...initThemes.dark.palette,
+      bgGradient: bgGradients.bg4,
+      background: { ...initThemes.dark.palette.background, paper: '#141421' },
+    },
+  },
 };
 
 function App() {
@@ -54,6 +74,8 @@ function App() {
   );
 
   const theme = responsiveFontSizes(customTheme[mode]);
+
+  console.log(theme);
 
   return (
     <>
