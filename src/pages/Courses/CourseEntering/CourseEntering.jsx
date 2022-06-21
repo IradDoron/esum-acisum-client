@@ -16,7 +16,10 @@ function CourseEntering({ course }) {
           </Typography>
         </CardContent>
         <CardActions>
-          <NavLink to={`/courses/${courseUrlName}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+          <NavLink
+            to={`/courses/${courseUrlName}/chapter-0/lesson-0`}
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
             <Button variant="contained" size="large" sx={{ fontSize: '1.5rem' }}>
               עבור לקורס
             </Button>
