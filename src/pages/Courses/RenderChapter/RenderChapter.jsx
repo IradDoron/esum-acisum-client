@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import courses from '../../../data/courses/courses';
 import { NavLink, Outlet } from 'react-router-dom';
 import CourseLessonsNav from '../CourseLessonsNav/CourseLessonsNav';
-import { Typography } from '@mui/material';
+import { Typography, Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function RenderChapter() {
   const params = useParams();
@@ -15,7 +16,17 @@ function RenderChapter() {
 
   return (
     <div>
-      <CourseLessonsNav lessonsArray={chapterData?.lessons} />
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography variant="h6">רשימת שיעורים</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <CourseLessonsNav lessonsArray={chapterData?.lessons} />
+        </AccordionDetails>
+      </Accordion>
+      <Typography variant="h4">{`${'שיעור'}${' '}${lesson.split('-')[1]}${' - '}${
+        chapterData?.lessons[Number(lesson.split('-')[1])]?.lessonTitle
+      }`}</Typography>
       <Outlet />
     </div>
   );

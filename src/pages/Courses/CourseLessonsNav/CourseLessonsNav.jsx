@@ -15,14 +15,6 @@ function CourseLessonsNav({ lessonsArray }) {
   return (
     <>
       <Box>
-        <Typography>{lessonsArray?.[Number(lesson?.split('-')[1])]?.lessonTitle}</Typography>
-        <Button variant="outlined" color="secondary" onClick={handleClick}>
-          {isShowChapters ? (
-            <Typography variant="h5">הסתר שיעורים</Typography>
-          ) : (
-            <Typography variant="h5">הצג שיעורים</Typography>
-          )}
-        </Button>
         {isShowChapters ? (
           <Stack component="nav" sx={{ maxHeight: '200px', overflow: 'scroll' }}>
             {lessonsArray?.map((lesson, index) => {

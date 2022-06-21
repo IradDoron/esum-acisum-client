@@ -2,8 +2,11 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import courses from '../../../data/courses/courses';
 import { NavLink, Outlet } from 'react-router-dom';
-import { Stack, Typography, Button, Divider, Portal } from '@mui/material';
+import { Stack, Typography, Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import CourseChaptersNav from '../CourseChaptersNav/CourseChaptersNav';
+import CourseLessonsNav from '../CourseLessonsNav/CourseLessonsNav';
 
 function RenderCourse() {
   const params = useParams();
@@ -25,7 +28,17 @@ function RenderCourse() {
           {courseData?.courseDescription}
         </Typography>
       </Stack>
-      <CourseChaptersNav chaptersArray={courseData?.chapters} />
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography variant="h6">רשימת פרקים</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <CourseChaptersNav chaptersArray={courseData?.chapters} />
+        </AccordionDetails>
+      </Accordion>
+      <Typography variant="h4">{`${'פרק'}${' '}${chapter.split('-')[1]}${' - '}${
+        courseData?.chapters[Number(chapter.split('-')[1])]?.chapterTitle
+      }`}</Typography>
       <Outlet />
     </div>
   );
