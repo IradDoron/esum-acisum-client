@@ -3,7 +3,9 @@ import { Stack, Typography } from '@mui/material';
 function CourseHeader() {
   return (
     <Stack direction="row" sx={{ flexWrap: 'wrap', margin: '50px 0' }}>
-      <Typography variant="h2">תבחרו את הקורס המתאים לכם וקדימה לעבודה!</Typography>
+      <Typography sx={{ textAlign: 'center', width: '100%' }} variant="h2">
+        קורסי מוזיקה
+      </Typography>
     </Stack>
   );
 }
