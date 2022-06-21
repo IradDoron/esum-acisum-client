@@ -8,12 +8,8 @@ function CourseEntering({ course }) {
     <Grid item xs={12} md={6} sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
       <Card sx={{ minHeight: '300px' }}>
         <CardContent>
-          <Typography variant="h1" sx={{ fontSize: '3rem' }}>
-            {courseTitle}
-          </Typography>
-          <Typography variant="h1" sx={{ fontSize: '1.5rem' }}>
-            {courseDescription}
-          </Typography>
+          <Typography variant="h3">{courseTitle}</Typography>
+          <Typography variant="p">{courseDescription}</Typography>
         </CardContent>
         <CardActions>
           <NavLink

@@ -11,8 +11,8 @@ function RenderLesson() {
   const { course, chapter, lesson } = params;
   const [lessonData, setLessonData] = useState(null);
   useEffect(() => {
-    setLessonData(courses[course].chapters[Number(chapter?.split('-')[1])].lessons[Number(lesson?.split('-')[1])]);
-  }, [lesson, chapter]);
+    setLessonData(courses[course].chapters[Number(chapter?.split('-')[1])]?.lessons[Number(lesson?.split('-')[1])]);
+  }, [lesson, chapter, course]);
 
   return (
     <Stack direction="column" sx={{ alignItems: 'center' }}>

@@ -12,7 +12,7 @@ function RenderChapter() {
   const [chapterData, setChapterData] = useState(null);
   useEffect(() => {
     setChapterData(courses[course].chapters[Number(chapter?.split('-')[1])]);
-  }, [chapter]);
+  }, [chapter, course]);
 
   return (
     <div>
