@@ -33,7 +33,7 @@ function RenderCourse() {
         </AccordionSummary>
         <AccordionDetails>
           <CourseChaptersNav chaptersArray={courseData?.chapters} />
-          <CourseLessonsNav lessonsArray={courseData?.chapters[Number(chapter?.split('-')[1])].lessons} />
+          <CourseLessonsNav lessonsArray={courseData?.chapters[Number(chapter?.split('-')[1])]?.lessons} />
         </AccordionDetails>
       </Accordion>
       <Paper variant="outlined" sx={{ flexWrap: 'wrap', margin: '20px 0 50px 0', padding: '30px' }}>
