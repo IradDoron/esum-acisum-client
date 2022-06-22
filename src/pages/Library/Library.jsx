@@ -1,7 +1,9 @@
+import { Typography } from '@mui/material';
+
 function Library() {
   return (
     <div>
-      <h1>Library</h1>
+      <Typography variant="h1">ספרייה</Typography>
     </div>
   );
 }

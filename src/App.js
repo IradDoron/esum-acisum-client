@@ -55,7 +55,7 @@ const customTheme = {
       ...initThemes.light.typography,
       body1: {
         ...initThemes.light.typography.body1,
-        fontSize: '1.5rem',
+        fontSize: '1.2rem',
       },
     },
   },
@@ -70,7 +70,7 @@ const customTheme = {
       ...initThemes.dark.typography,
       body1: {
         ...initThemes.dark.typography.body1,
-        fontSize: '1.5rem',
+        fontSize: '1.2rem',
       },
     },
   },

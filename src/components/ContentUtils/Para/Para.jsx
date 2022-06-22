@@ -17,6 +17,7 @@ function Para({ children, isItem }) {
         textAlign: 'start',
         width: '100%',
         margin: '24px 0',
+        fontFamily: 'Helvetica',
       }}
     >
       {children}
