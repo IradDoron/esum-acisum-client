@@ -2,11 +2,11 @@ import { Card, Typography, Grid, Accordion, AccordionDetails, AccordionSummary }
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function VideosMat({ value }) {
-  const { videos, title } = value;
+  const { videos, videosMatTitle } = value;
   return (
     <Accordion sx={{ marginBottom: 3 }}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <Typography>{title}</Typography>
+        <Typography>{videosMatTitle}</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <div style={{ maxWidth: '700px' }}>
@@ -16,7 +16,7 @@ function VideosMat({ value }) {
                 <Grid key={index} item>
                   <Card sx={{ display: 'flex', flexDirection: 'column', margin: '15px', padding: '5px' }}>
                     <Typography variant="h4" sx={{ textAlign: 'center' }}>
-                      {video.title}
+                      {video.videoTitle}
                     </Typography>
                     <iframe
                       src={video.url}

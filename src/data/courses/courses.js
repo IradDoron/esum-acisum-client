@@ -4155,7 +4155,6 @@ const courses = {
       </svg>
     ),
     courseDescription: 'נחזק את טכניקות הליווי בשתי הידיים ונלמד עוד תווים באוקטבה השנייה',
-    price: 'my price',
     duration: 'my duration',
     level: 'מתחילים',
     tags: ['my tag1', 'my tag2'],
@@ -4163,6 +4162,751 @@ const courses = {
     courseId: 'my courseId',
     lessonsCount: 'my lessonsCount',
     chapters: [],
+  },
+  course3: {
+    courseTitle: 'אלתור בפסנתר - חלק 1',
+    courseUrlName: 'course3',
+    thumbSvg: (
+      <svg height="100" width="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+        Sorry, your browser does not support inline SVG.
+      </svg>
+    ),
+    courseDescription: 'נלמד איך לאלתר מנגינות פשוטות על בסיס מהלכי אקורדים',
+    tags: ['my tag1', 'my tag2'],
+    level: 'מתחילים',
+    chapters: [
+      // chapter - דברי פתיחה
+      {
+        chapterTitle: 'דברי פתיחה',
+        chapterDescription: 'כמה מילים לפני שמתחילים',
+        lessons: [
+          {
+            lessonTitle: 'יעדי הקורס',
+            lessonDescription: 'נראה לאן הקורס הזה יוביל אתכם, ומאיפה מתחילים',
+            lessonElements: [
+              {
+                topic: {
+                  topicTitle: 'הדגמות',
+                  topicElements: [
+                    {
+                      para: 'לפעמים הכי טוב להתחיל בהדגמה. אראה לכם כמה דוגמאות לאלתורים שתוכלו לנגן בסוף הקורס.',
+                    },
+                    {
+                      videosMat: {
+                        videosMatTitle: 'דוגמאות לנגינת יצירות',
+                        videos: [
+                          {
+                            videoTitle: 'this is the videotitle',
+                            url: 'https://www.youtube.com/embed/EAg-MUqCnJY',
+                          },
+                          {
+                            videoTitle: 'this is the videotitle',
+                            url: 'https://www.youtube.com/embed/EAg-MUqCnJY',
+                          },
+                          {
+                            videoTitle: 'this is the videotitle',
+                            url: 'https://www.youtube.com/embed/EAg-MUqCnJY',
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+          {
+            lessonTitle: 'מבוא תיאורטי',
+            lessonDescription: 'ניזכר בכל ענייני התאוריה שנחוצים לנו בקורס הזה',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+        ],
+      },
+      // chapter - חזרה על טכניקות ליווי
+      {
+        chapterTitle: 'חזרה על טכניקות ליווי',
+        chapterDescription: 'חזרה מהירה על טכניקות ליווי ביד שמאל, ביד ימין, ובשתי ידיים',
+        tags: ['my chapter tag1', 'my chapter tag2'],
+        lessons: [
+          {
+            lessonTitle: 'טכניקות ליווי ליד שמאל',
+            lessonDescription: 'חזרה על טכניקות ליווי ביד שמאל',
+            lessonElements: [
+              {
+                topic: {
+                  topicTitle: 'חזרה על ליווי ביד שמאל',
+                  topicElements: [
+                    {
+                      para: 'בשיעור הזה ניזכר בטכניקות הליווי הבסיסיות ליד שמאל. נדבר על שורשים, בלוקים ופירוקי רבעים. במהלך הקורס אדגים את רוב התוכן באמצעות פירוקי רבעים, אז תדעו לנגן את הטכניקה הזאת היטב לפני שאתם מתקדמים בקורס.',
+                    },
+                  ],
+                },
+              },
+              {
+                topic: {
+                  topicTitle: 'ליווי שורשים',
+                  topicElements: [
+                    {
+                      para: 'ליווי שורשים זוהי שיטת הליווי הבסיסית ביותר. בשיטה זו מנגנית את הצליל הראשון של האקורד (המכונה ״השורש״), בתחילת כל אקורד חדש. אם אקורד נמשך יותר מתיבה אחת אז אפשר כל תחילת תיבה לנגן שוב את צליל השורש.',
+                    },
+                    {
+                      para: 'אדגים את הטכניק הבעזרת מהלך האקורדים הבא:',
+                    },
+                    {
+                      tune: {
+                        header: {
+                          L: '1/1',
+                          K: 'C',
+                          M: '4/4',
+                        },
+                        body: `"C" z | "F" z | "G" z | "Em" z |
+                        "Am" z | "F" z | "C" z | "G" z | "C" z |]`,
+                      },
+                    },
+                    {
+                      videosMat: {
+                        videosMatTitle: 'הדגמה',
+                        videos: [
+                          {
+                            videoTitle: 'ליווי שורשים',
+                            url: 'https://www.youtube.com/embed/EAg-MUqCnJY',
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+              {
+                topic: {
+                  topicTitle: 'בלוקים ביד שמאל',
+                  topicElements: [
+                    {
+                      para: 'שיטת הבלוקים אמנם פשוטה יחסית אבל מאוד שימושית. היא מתאים בסיטואציות שרוצים להעביר תחושה רגועה, ולתת הרבה מקום לתפקיד הסולו. במקרה שלנו בקורס הזה - לאלתורים ביד ימין.',
+                    },
+                    {
+                      para: 'כדי ללוות בשיטת הבלוקים, ננגן כמה מצלילי האקורד בבת אחת. לבלוקים ביד שמאל של אקורדים משולשים אין הרבה אפשרויות. למעשה יש ארבע.',
+                    },
+                    {
+                      oList: [
+                        {
+                          listItem: 'לנגן רק את השורש, ונתייחס אליו כאל ״בלוק״ המכיל צליל אחד.',
+                        },
+                        {
+                          listItem: 'לנגן את השורש ביחד עם אוקטבה מעליו.',
+                        },
+                        {
+                          listItem: 'לנגן את השורש ביחד עם קווינטה מעליו (הצליל השלישי של האקורד).',
+                        },
+                        {
+                          listItem:
+                            'לנגן את השורש ביחד עם קווינטה מעליו וגם עם אוקטבה מעליו. סה״כ שלושה צלילים. זאת התבנית הכי מלאה של שיטת הבלוקים.',
+                        },
+                      ],
+                    },
+
+                    {
+                      para: 'אדגים את הטכניקה בעזרת אותו מהלך האקורדים (אשלב תבניות שונות בהדגמה):',
+                    },
+                    {
+                      tune: {
+                        header: {
+                          L: '1/1',
+                          K: 'C',
+                          M: '4/4',
+                        },
+                        body: `"C" z | "F" z | "G" z | "Em" z |
+                        "Am" z | "F" z | "C" z | "G" z | "C" z |]`,
+                      },
+                    },
+                    {
+                      videosMat: {
+                        videosMatTitle: 'הדגמה',
+                        videos: [
+                          {
+                            videoTitle: 'ליווי בלוקים',
+                            url: 'https://www.youtube.com/embed/EAg-MUqCnJY',
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+              {
+                topic: {
+                  topicTitle: 'פירוקי רבעים',
+                  topicElements: [
+                    {
+                      para: 'זאת הטכניקה המורכבת ביותר מתוך שלושת טכניקות הליווי ליד שמאל שנבצע בקורס הזה.',
+                    },
+                    {
+                      para: 'בטכניקת הרבעים, כל רבע בתיבה ננגן צליל אחר של האקורד. אפשר להשתמש באילו תבניות שאתם רוצים.',
+                    },
+                    {
+                      para: 'אדגים את הטכניקה בעזרת מהלך האקורדים הבא:',
+                    },
+                    {
+                      tune: {
+                        header: {
+                          L: '1/1',
+                          K: 'C',
+                          M: '4/4',
+                        },
+                        body: `"C" z | "F" z | "G" z | "Em" z |
+                        "Am" z | "F" z | "C" z | "G" z | "C" z |]`,
+                      },
+                    },
+                    {
+                      videosMat: {
+                        videosMatTitle: 'הדגמה',
+                        videos: [
+                          {
+                            videoTitle: 'ליווי שורשים',
+                            url: 'https://www.youtube.com/embed/EAg-MUqCnJY',
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+          {
+            lessonTitle: 'טכניקות ליווי ליד ימין',
+            lessonDescription: 'חזרה על טכניקות ליווי ביד ימין',
+            lessonElements: [
+              {
+                topic: {
+                  topicTitle: 'חזרה על ליווי ביד ימין',
+                  topicElements: [
+                    {
+                      para: 'בשיעור הזה ניזכר בטכניקות ליווי ביד ימין. נלווה בטכניקות השונות על בסיס בלוקים:',
+                    },
+                    {
+                      oList: [
+                        {
+                          listItem: 'בלוקים סטטיים עם שלושה צלילים.',
+                        },
+                        {
+                          listItem: 'בלוקים דינמיים עם שלושה צלילים.',
+                        },
+                        {
+                          listItem: 'בלוקים סטטיים עם ארבעה צלילים.',
+                        },
+                        {
+                          listItem: 'בלוקים דינמיים עם ארבעה צלילים.',
+                        },
+                      ],
+                    },
+                  ],
+                },
+              },
+              {
+                topic: {
+                  topicTitle: 'בלוקים סטטיים עם שלושה צלילים',
+                  topicElements: [
+                    {
+                      para: 'בטכניקה הזאת אנחנו מנגנים שלושה מצלילי האקורד, בכל פוזיציה שאנחנו רוצים, ורק פעם אחת כל אקורד. אם אקורד נמשך יותר מתיבה אחת אפשר כל תחילת תיבה לנגן עוד בלוק של האקורד.',
+                    },
+                    {
+                      para: 'נראה דוגמה לליווי מהלך האקורדים הבא:',
+                    },
+                    {
+                      tune: {
+                        header: {
+                          L: '1/1',
+                          K: 'C',
+                          M: '4/4',
+                        },
+                        body: `"C" z | "F" z | "G" z | "Em" z |
+                        "Am" z | "F" z | "C" z | "G" z | "C" z |]`,
+                      },
+                    },
+                    {
+                      videosMat: {
+                        videosMatTitle: 'הדגמה',
+                        videos: [
+                          {
+                            videoTitle: 'ליווי בלוקים סטטיים עם שלושה צלילים',
+                            url: 'https://www.youtube.com/embed/EAg-MUqCnJY',
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+              {
+                topic: {
+                  topicTitle: 'בלוקים דינמיים עם שלושה צלילים',
+                  topicElements: [
+                    {
+                      para: 'גם כאן ננגן בלוקים של שלושה צלילים, אבל כדי לנגן בצורה דינמית נעבור בין פוזיציות על כל אקורד. כלומר ננגן יותר מבלוק אחד על כל אקורד. אפשר לנגן בלוק כל חצי, כל רבע, או שילוב של השניים.. ',
+                    },
+                    {
+                      para: 'נראה דוגמה לליווי מהלך האקורדים הבא:',
+                    },
+                    {
+                      tune: {
+                        header: {
+                          L: '1/1',
+                          K: 'C',
+                          M: '4/4',
+                        },
+                        body: `"C" z | "F" z | "G" z | "Em" z |
+                        "Am" z | "F" z | "C" z | "G" z | "C" z |]`,
+                      },
+                    },
+                    {
+                      videosMat: {
+                        videosMatTitle: 'הדגמה',
+                        videos: [
+                          {
+                            videoTitle: 'ליווי בלוקים סטטיים עם שלושה צלילים',
+                            url: 'https://www.youtube.com/embed/EAg-MUqCnJY',
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+              {
+                topic: {
+                  topicTitle: 'בלוקים סטטיים עם ארבעה צלילים',
+                  topicElements: [
+                    {
+                      para: 'בדומה לבלוקים סטטיים עם שלושה צלילים, אפשר לנגן בלוקים עם ארבעה צלילים.',
+                    },
+                    {
+                      para: 'כל אקורד אפשר לבחור את הפוזיציה המועדפת עלינו, אבל תנגנו רק בלוק אחד על כל אקורד. רצוי רוב הזמן לנגן את הבלוקים כמה שיותר קרובים אחד לשני, בלי קפיצות גדולות.',
+                    },
+                    {
+                      para: 'כמו כן שימו לב לאצבוע הנכון של הבלוקים בארבעה צלילים. לנגן באצבוע נכון ייתן לכם הרגלי נגינה בריאים שיעזרו לנו לאלתר בהמשך הקורס.',
+                    },
+                    {
+                      para: 'נראה דוגמה לליווי מהלך האקורדים הבא:',
+                    },
+                    {
+                      tune: {
+                        header: {
+                          L: '1/1',
+                          K: 'C',
+                          M: '4/4',
+                        },
+                        body: `"C" z | "F" z | "G" z | "Em" z |
+                        "Am" z | "F" z | "C" z | "G" z | "C" z |]`,
+                      },
+                    },
+                    {
+                      videosMat: {
+                        videosMatTitle: 'הדגמה',
+                        videos: [
+                          {
+                            videoTitle: 'ליווי בלוקים סטטיים עם ארבעה צלילים',
+                            url: 'https://www.youtube.com/embed/EAg-MUqCnJY',
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+              {
+                topic: {
+                  topicTitle: 'בלוקים דינמיים עם ארבעה צלילים',
+                  topicElements: [
+                    {
+                      para: 'ממש כמו בלוקים דינמיים עם שלושה צלילים, גם בטכניקה הזאת אנחנו קופצים בין פוזיציות על כל אקורד שאנחנו מנגנים. תנו לאוזן ולחושים המוזיקליים שלכם להכווין אתכם. תשלבו בלוקים בחצאים, ברבעים, ובכל שילוב שלהם שנשמע לכם טוב.',
+                    },
+                    {
+                      para: 'נראה דוגמה לליווי מהלך האקורדים הבא:',
+                    },
+                    {
+                      tune: {
+                        header: {
+                          L: '1/1',
+                          K: 'C',
+                          M: '4/4',
+                        },
+                        body: `"C" z | "F" z | "G" z | "Em" z |
+                        "Am" z | "F" z | "C" z | "G" z | "C" z |]`,
+                      },
+                    },
+                    {
+                      videosMat: {
+                        videosMatTitle: 'הדגמה',
+                        videos: [
+                          {
+                            videoTitle: 'ליווי בלוקים סטטיים עם שלושה צלילים',
+                            url: 'https://www.youtube.com/embed/EAg-MUqCnJY',
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+          {
+            lessonTitle: 'טכניקות ליווי לשתי ידיים',
+            lessonDescription: 'חזרה על טכניקות ליווי בשתי ידיים',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+              {
+                topic: {
+                  topicTitle: 'סיכום כל טכניקות הליווי של הקורס',
+                  topicElements: [
+                    {
+                      para: 'בשיעור הזה נחזור על שילוב כל טכניקות הליווי ביד שמאל עם כל טכניקות הליווי ביד ימין. אחרי השיעור הזה אתם מוכנים להתחיל לעבוד על טכניקות אלתורים!',
+                    },
+                    {
+                      para: 'זה לגמרי בסדר לעבוד על תוכן השיעור הזה כמה ימים ואפילו כמה שבועות. אתם צריכים להרגיש חופש מוחלט עם הטכניקות בשתי הידיים וכל השילובים ביניהם. קחו לכם את הזמן הדרוש לכך, וכשתיהיו מוכנים תמשיכו הלאה.',
+                    },
+                  ],
+                },
+              },
+              {
+                topic: {
+                  topicTitle: 'שורשים + בלוקים סטטיים',
+                  topicElements: [],
+                },
+              },
+              {
+                topic: {
+                  topicTitle: 'שורשים + בלוקים דינמיים',
+                  topicElements: [],
+                },
+              },
+              {
+                topic: {
+                  topicTitle: 'בלוקים בשתי ידיים',
+                  topicElements: [],
+                },
+              },
+              {
+                topic: {
+                  topicTitle: 'פירוקי רבעים + בלוקים סטטיים',
+                  topicElements: [],
+                },
+              },
+              {
+                topic: {
+                  topicTitle: 'פירוקי רבעים + בלוקים דינמיים',
+                  topicElements: [],
+                },
+              },
+            ],
+          },
+        ],
+      },
+      // chapter - אלתור לפי ערכי קצב בסיסיים
+      {
+        chapterTitle: 'אלתור לפי ערכי קצב בסיסיים',
+        chapterDescription: 'נלמד איך מאלתרים על סמך ערכי קצב של צלילי מנגינת האלתור.',
+        lessons: [
+          {
+            lessonTitle: 'אלתור שלמים',
+            lessonDescription: '',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+              {
+                topic: {
+                  topicTitle: 'מה זה אלתור שלמים?',
+                  topicElements: [
+                    {
+                      para: 'את כל האלתורים בפרק אנחנו נבסס על מהלך הרמוני נתון. כלומר נלמד אוסף של טכניקות לאלתור מנגינות על כל אקורד שנופל לכם בידיים.',
+                    },
+                    {
+                      para: 'באלתור שלמים אנחנו ננגן רצף צלילים כאשר כל אחד יהיה בערך קצב של ״שלם״. משך של ארבעה רבעים. ',
+                    },
+                    {
+                      para: 'אז ברור לנו מה יהיה המשך של הצלילים שנאלתר. אבל אילו צלילים ננגן בכלל? יש כל מיני דרכים לבחור את הצלילים שננגן באלתורים. בשיעור הזה אנחנו נבחר אחד מצלילי האקורד הנוכחי. כלומר אם אנחנו רוצים לאלתר מנגינה על פני אקורד דו מז׳ור, שמורכב מהצלילים דו, מי וסול, אנחנו ננגן את אחד מהצלילים האלו והוא יהיה בעל משך של שלם.',
+                    },
+                    {
+                      para: 'בשיעור הזה בכל חלק אראה לכם מהלך אקורדים כלשהו, ותוכלו להקשיב לפלייבק של המהלך ולנסות לאלתר עליו. אני אנגן בטמפו של 60 bpm ואתם תוכלו להריץ את הפלייבק במהירות גבוה יותר כשתהיו מוכנים להגביר טמפו.',
+                    },
+
+                    {
+                      para: 'בואו נראה דוגמה. תסתכלו על מהלך האקורדים הבא:',
+                    },
+                    {
+                      tune: {
+                        header: {
+                          L: '1/1',
+                          M: '4/4',
+                          K: 'C',
+                        },
+                        body: `"C" z | "Em" z | "F" z | "G" z |
+                        "C" z | "Am" z | "Dm" z | "G" z | "C" z |]
+                        `,
+                      },
+                    },
+                    {
+                      para: 'כדי להצליח לאלתר על האקורדים האלה אתם צריכים לפני הכל לדעת היטב את הצלילים של כל האקורדים כאן. ',
+                    },
+                    {
+                      para: 'אכתוב לכם כמה דוגמאות לאלתור בשיטת ״שלמים״:',
+                    },
+                    {
+                      tune: {
+                        header: {
+                          L: '1/1',
+                          M: '4/4',
+                          K: 'C',
+                        },
+                        body: `"C" z | "Em" z | "F" z | "G" z |
+                        "C" z | "Am" z | "Dm" z | "G" z | "C" z |]
+                        `,
+                      },
+                    },
+                  ],
+                },
+              },
+              
+
+            ],
+          },
+          {
+            lessonTitle: 'אלתור חצאים',
+            lessonDescription: '',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'אלתור רבעים',
+            lessonDescription: '',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'אלתור שמיניות',
+            lessonDescription: '',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'תבניות מלודיות לאלתורים',
+            lessonDescription: '',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+        ],
+      },
+      // chapter - אלתור עם בלוקים
+      {
+        chapterTitle: 'אלתור עם בלוקים',
+        chapterDescription: 'נראה איך אפשר לשלב בלוקים באלתורים',
+        tags: ['my chapter tag1', 'my chapter tag2'],
+        lessons: [
+          {
+            lessonTitle: 'אלתור בלוקים דינמיים בחצאים',
+            lessonDescription: '',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'אלתור בלוקים דינמיים ברבעים',
+            lessonDescription: '',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'אלתור בלוקים דינמיים ומנגינות ברבעים',
+            lessonDescription: '',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'אלתור בלוקים דינמיים ומנגינות בשמיניות',
+            lessonDescription: '',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+        ],
+      },
+      // chapter - אלתור עם ארפג׳יאו
+      {
+        chapterTitle: 'אלתור עם ארפג׳יאו',
+        chapterDescription: 'נלמד לשלב תבניות ארפג׳יאו באלתורים',
+        lessons: [
+          {
+            lessonTitle: 'שתי תבניות ארפג׳יאו לשלושה צלילים',
+            lessonDescription: 'נלמד שתי תבניות ארפג׳יאו בסיסיות לשלושה צלילים',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'תבנית ארפג׳יאו נוספת וטיול על המקלדת',
+            lessonDescription: 'נלמד תבנית נוספת ונעבור בין רגיסטרים שונים במקלדת',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'תבניות ארפג׳יאו סטטיות לארבעה צלילים',
+            lessonDescription: 'נלמד שתי תבניות ארפג׳יאו לארבעה צלילים וננגן אותן באופן סטטי',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'תבניות דינמיות לארבעה צלילים',
+            lessonDescription: 'נשתמש בתבניות של הארבעה צלילים בצורה דינמית',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'שילוב ארפג׳או באלתורים',
+            lessonDescription: 'נשתמש בתבניות הארפג׳או שלמדנו ובשאר טכניקות האלתורים ביחד',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+        ],
+      },
+      // chapter - טכניקת צליל חוזר
+      {
+        chapterTitle: 'טכניקת צליל חוזר',
+        chapterDescription: 'נלמד טכניקת אלתור חדשה ונלמד לשלב אותה באלתורים',
+        lessons: [
+          {
+            lessonTitle: 'דוגמה בסיסית לטכניקה צליל חוזר',
+            lessonDescription: 'נבין היטב איך בונים תפקידי אלתור בעזרת הטכניקה צליל חוזר',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+        ],
+      },
+      // chapter - אלתורים עם טריולות
+      {
+        chapterTitle: 'אלתורים עם טריולות',
+        chapterDescription: 'נלמד לשלב מנגינות בטריולות באלתורים',
+        lessons: [
+          {
+            lessonTitle: 'בואו ננגן עם טריולות',
+            lessonDescription: 'נראה כמה דוגמאות לשילוב טריולות באלתורים',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'תבניות נגינה לטריולות',
+            lessonDescription: 'נלמד כמה תבניות לנגינת טריולות',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+        ],
+      },
+      // chapter - אלתורים עם חלקי 16
+      {
+        chapterTitle: 'אלתורים עם חלקי 16',
+        chapterDescription: 'נלמד לשלב מנגינות בחלקי 16 באלתורים',
+        lessons: [
+          {
+            lessonTitle: 'תוספות קטנות של חלקי 16',
+            lessonDescription: 'נשלב באלתורים מדי פעם גם פראזות של חלקי 16',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'תבנית קפיצות טרצה',
+            lessonDescription: 'נלמד תבנית נגינה לחלקי 16 על בסיס קפיצות טרצה',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'ריצות סולם של ארבעה צלילים',
+            lessonDescription: 'נלמד תבנית נגינה לחלקי 16 של נגינת חלקי סולם באורך של ארבעה צלילים',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'ריצות סולם של שמונה צלילים',
+            lessonDescription: 'נלמד תבנית נגינה לחלקי 16 של נגינת חלקי סולם באורך של שמונה צלילים',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+          {
+            lessonTitle: 'שילוב כל הטכניקות לאלתור בחלקי 16',
+            lessonDescription: 'נשלב באלתורים את כל מה שלמדנו בפרק הזה',
+            lessonElements: [
+              {
+                comingSoon: '',
+              },
+            ],
+          },
+        ],
+      },
+    ],
   },
 };
 
