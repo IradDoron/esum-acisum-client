@@ -109,7 +109,7 @@ function App() {
           >
             <Stack direction="column" sx={{ alignItems: 'center' }}>
               <MainNav />
-              <Stack sx={{ maxWidth: '1200px', width: '90%' }}>
+              <Stack >
                 <Routing />
               </Stack>
             </Stack>
