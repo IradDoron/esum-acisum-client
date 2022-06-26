@@ -64,42 +64,42 @@ function Courses() {
       </Accordion>
 
       <Outlet />
-        {isMenuOpen ? (
-          <Box
-            sx={{
-              position: 'fixed',
-              width: '480px',
-              height: 'calc(100vh - 44px)',
-              top: '44px',
-              right: '0',
-              overflow: 'scroll',
-            }}
+      {isMenuOpen ? (
+        <Box
+          sx={{
+            position: 'fixed',
+            width: '480px',
+            height: 'calc(100vh - 44px)',
+            top: '44px',
+            right: '0',
+            overflow: 'scroll',
+          }}
+        >
+          <IconButton sx={{ position: 'absolute', right: '426px', top: '22px' }} onClick={handleToggleMenu}>
+            <CloseIcon />
+          </IconButton>
+          <CourseNav isOpen={isMenuOpen} />
+        </Box>
+      ) : (
+        <Box
+          sx={{
+            position: 'fixed',
+            width: '0px',
+            height: 'calc(100vh - 44px)',
+            top: '44px',
+            overflow: 'scroll',
+          }}
+        >
+          <Button
+            sx={{ position: 'fixed', zIndex: 7 }}
+            variant="outlined"
+            endIcon={<ArrowBackIcon />}
+            onClick={handleToggleMenu}
           >
-            <IconButton sx={{ position: 'absolute', right: '426px', top: '22px' }} onClick={handleToggleMenu}>
-              <CloseIcon />
-            </IconButton>
-            <CourseNav isOpen={isMenuOpen} />
-          </Box>
-        ) : (
-          <Box
-            sx={{
-              position: 'fixed',
-              width: '0px',
-              height: 'calc(100vh - 44px)',
-              top: '44px',
-              overflow: 'scroll',
-            }}
-          >
-            <Button
-              sx={{ position: 'fixed', zIndex: 7 }}
-              variant="outlined"
-              endIcon={<ArrowBackIcon />}
-              onClick={handleToggleMenu}
-            >
-              <Typography sx={{ margin: '0 10px' }}>הצג תפריט</Typography>
-            </Button>
-          </Box>
-        )}
+            <Typography sx={{ margin: '0 10px' }}>הצג תפריט</Typography>
+          </Button>
+        </Box>
+      )}
     </div>
   );
 }
