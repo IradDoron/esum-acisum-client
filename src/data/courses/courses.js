@@ -975,6 +975,24 @@ const courses = {
                   ],
                 },
               },
+              {
+                topic: {
+                  topicTitle: 'הסבר על טכניקת השורשים',
+                  topicElements: [
+                    {
+                      videosMat: {
+                        videosMatTitle: 'סרטוני הדרכה',
+                        videos: [
+                          {
+                            videoTitle: 'מבוא לטכניקת השורשים',
+                            url: 'https://www.youtube.com/embed/TLI7EK1Tvfk',
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
             ],
           },
           // lesson - תרגול שורשים
