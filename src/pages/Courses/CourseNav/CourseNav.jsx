@@ -4,10 +4,19 @@ import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 
 // imports from materail ui
-import { Stack, Typography, Accordion, AccordionDetails, AccordionSummary, Paper, Divider } from '@mui/material';
+import {
+  Stack,
+  Typography,
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Paper,
+  Divider,
+  IconButton,
+} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-function CourseNav({ isOpen }) {
+function CourseNav({ isOpen, handleToggleMenu }) {
   const params = useParams();
   const { course, chapter, lesson } = params;
   const [expanded, setExpanded] = useState(null);
@@ -22,7 +31,25 @@ function CourseNav({ isOpen }) {
     <>
       {isOpen ? (
         <Paper>
-          <Typography variant="h2">תוכן הקורס</Typography>
+          <Stack sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+            <Typography variant="h2">תוכן הקורס</Typography>
+            <IconButton
+              sx={(theme) => ({
+                [theme.breakpoints.down('lg')]: {
+                  position: 'static',
+                },
+                [theme.breakpoints.up('lg')]: {
+                  position: 'absolute',
+                  right: '426px',
+                  top: '22px',
+                },
+              })}
+              onClick={handleToggleMenu}
+            >
+              <CloseIcon />
+            </IconButton>
+          </Stack>
+
           {courses[course]?.chapters.map((chapter, indexChapter) => (
             <Accordion
               key={indexChapter}

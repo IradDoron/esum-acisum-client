@@ -17,25 +17,20 @@ import {
   IconButton,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CourseNav from './CourseNav/CourseNav';
 import { styled } from '@mui/material/styles';
-import { red, green, blue } from '@mui/material/colors';
 
 // import data
 import courses from '../../data/courses/courses';
 
-const Root = styled('div')(({ theme }) => ({
-  padding: theme.spacing(1),
-  [theme.breakpoints.down('md')]: {
-    backgroundColor: red[500],
-  },
-  [theme.breakpoints.up('md')]: {
-    backgroundColor: blue[500],
+const ResponsiveContainer = styled(Stack)(({ theme }) => ({
+  display: 'flex',
+  [theme.breakpoints.down('lg')]: {
+    flexDirection: 'column',
   },
   [theme.breakpoints.up('lg')]: {
-    backgroundColor: green[500],
+    flexDirection: 'row',
   },
 }));
 
@@ -46,9 +41,18 @@ function Courses() {
   function handleToggleMenu() {
     setIsMenuOpen(!isMenuOpen);
   }
-
+  // style={{ paddingRight: `${isMenuOpen ? '480px' : '0'}` }}
   return (
-    <div style={{ paddingRight: `${isMenuOpen ? '480px' : '0'}` }}>
+    <Box
+      sx={(theme) => ({
+        [theme.breakpoints.down('lg')]: {
+          padding: '0',
+        },
+        [theme.breakpoints.up('lg')]: {
+          paddingRight: `${isMenuOpen ? '480px' : '0'}`,
+        },
+      })}
+    >
       <CourseHeader />
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -62,45 +66,37 @@ function Courses() {
           </Grid>
         </AccordionDetails>
       </Accordion>
-
-      <Outlet />
-      {isMenuOpen ? (
-        <Box
-          sx={{
-            position: 'fixed',
-            width: '480px',
-            height: 'calc(100vh - 44px)',
-            top: '44px',
-            right: '0',
-            overflow: 'scroll',
-          }}
-        >
-          <IconButton sx={{ position: 'absolute', right: '426px', top: '22px' }} onClick={handleToggleMenu}>
-            <CloseIcon />
-          </IconButton>
-          <CourseNav isOpen={isMenuOpen} />
-        </Box>
-      ) : (
-        <Box
-          sx={{
-            position: 'fixed',
-            width: '0px',
-            height: 'calc(100vh - 44px)',
-            top: '44px',
-            overflow: 'scroll',
-          }}
-        >
+      <ResponsiveContainer>
+        <Outlet />
+        {isMenuOpen ? (
+          <Box
+            sx={(theme) => ({
+              position: 'fixed',
+              width: '480px',
+              height: 'calc(100vh - 44px)',
+              top: '44px',
+              right: '0',
+              overflow: 'scroll',
+              [theme.breakpoints.down('lg')]: {
+                position: 'static',
+                width: '100%',
+              },
+            })}
+          >
+            <CourseNav handleToggleMenu={handleToggleMenu} isOpen={isMenuOpen} />
+          </Box>
+        ) : (
           <Button
-            sx={{ position: 'fixed', zIndex: 7 }}
+            sx={{ position: 'fixed', zIndex: 1500, top: '44px' }}
             variant="outlined"
             endIcon={<ArrowBackIcon />}
             onClick={handleToggleMenu}
           >
-            <Typography sx={{ margin: '0 10px' }}>הצג תפריט</Typography>
+            <Typography sx={{ margin: '0 10px', zIndex: 1100 }}>הצג תפריט</Typography>
           </Button>
-        </Box>
-      )}
-    </div>
+        )}
+      </ResponsiveContainer>
+    </Box>
   );
 }
 

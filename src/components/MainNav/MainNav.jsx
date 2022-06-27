@@ -90,7 +90,7 @@ function MainNav() {
           top: 0,
           border: 'solid',
           width: '100%',
-          zIndex: '1',
+          zIndex: '1000',
           bgcolor: 'background.default',
         }}
       >
