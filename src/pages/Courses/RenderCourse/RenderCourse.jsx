@@ -6,10 +6,40 @@ import { Stack, Typography, Accordion, AccordionDetails, AccordionSummary, Paper
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CloseIcon from '@mui/icons-material/Close';
 
+import { styled } from '@mui/material/styles';
+
 import CourseChaptersNav from '../CourseChaptersNav/CourseChaptersNav';
 import CourseLessonsNav from '../CourseLessonsNav/CourseLessonsNav';
 import NavButtons from '../NavButtons/NavButtons';
 import CourseNav from '../CourseNav/CourseNav';
+
+const StyledCourseTitle = styled(Typography)(({ theme }) => ({
+  textAlign: 'center',
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '3.5rem',
+    fontWeight: 'bold',
+    marginBottom: '20px',
+  },
+  [theme.breakpoints.up('lg')]: {
+    fontSize: '4.5rem',
+    fontWeight: 'bold',
+    marginBottom: '20px',
+  },
+}));
+
+const StyledCourseDescription = styled(Typography)(({ theme }) => ({
+  textAlign: 'center',
+  fontWeight: 'bold',
+  marginBottom: '20px',
+}));
+
+const StyledChapterTitle = styled(Typography)(({ theme }) => ({
+  textAlign: 'center',
+}));
+
+const StyledSVGPaper = styled(Paper)(({ theme }) => ({
+  height: '400px',
+}));
 
 function RenderCourse() {
   const params = useParams();
@@ -21,27 +51,21 @@ function RenderCourse() {
 
   return (
     <>
-      <div style={{ zIndex: '1' }}>
+      <div style={{ zIndex: '1', width: '100%' }}>
         <Stack direction="column">
-          <Paper variant="outlined" sx={{ flexWrap: 'wrap', margin: '20px 0 50px 0', padding: '30px' }}>
-            <Typography sx={{ textAlign: 'center' }} variant="h2">
-              {courseData?.courseTitle}
-            </Typography>
-            <Typography sx={{ textAlign: 'center' }} variant="h6">
-              {courseData?.courseDescription}
-            </Typography>
+          <Paper variant="outlined" sx={{ flexWrap: 'wrap', padding: '100px 30px' }}>
+            <StyledCourseTitle variant="h2">{courseData?.courseTitle}</StyledCourseTitle>
+            <StyledCourseDescription variant="h4">{courseData?.courseDescription}</StyledCourseDescription>
           </Paper>
-          <Paper variant="outlined" sx={{ flexWrap: 'wrap', margin: '20px 0 50px 0', padding: '30px' }}>
-            <Typography sx={{ textAlign: 'center' }} variant="h3">
-              {`${'פרק'}${' '}${chapter?.split('-')[1]}`}
-            </Typography>
-            <Typography sx={{ textAlign: 'center' }} variant="h3">
+          <Paper variant="outlined" sx={{ flexWrap: 'wrap', padding: '100px 30px' }}>
+            <StyledChapterTitle variant="h3">{`${'פרק'}${' '}${chapter?.split('-')[1]}`}</StyledChapterTitle>
+            <StyledChapterTitle variant="h3">
               {courseData?.chapters[Number(chapter?.split('-')[1])]?.chapterTitle}
-            </Typography>
-            <Typography sx={{ textAlign: 'center' }} variant="h6">
+            </StyledChapterTitle>
+            <StyledCourseDescription sx={{ textAlign: 'center' }} variant="h6">
               {courseData?.chapters[Number(chapter?.split('-')[1])]?.chapterDescription &&
                 courseData?.chapters[Number(chapter?.split('-')[1])]?.chapterDescription}
-            </Typography>
+            </StyledCourseDescription>
           </Paper>
         </Stack>
         <Stack direction="row" sx={{ display: 'flex', justifyContent: 'space-between' }}>
