@@ -45,7 +45,17 @@ function RenderCourse() {
           </Paper>
         </Stack>
         <Stack direction="row" sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Box sx={{ margin: '0 auto', width: '70%' }}>
+          <Box
+            sx={(theme) => ({
+              [theme.breakpoints.down('lg')]: {
+                width: '100%',
+              },
+              [theme.breakpoints.up('lg')]: {
+                width: '70%',
+                margin: 'auto',
+              },
+            })}
+          >
             <Paper variant="outlined" sx={{ flexWrap: 'wrap', margin: '0 0 50px 0', padding: '30px' }}>
               <Typography sx={{ textAlign: 'center' }} variant="h3">
                 {`${'שיעור'}${' '}${lesson?.split('-')[1]}`}

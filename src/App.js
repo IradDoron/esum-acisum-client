@@ -104,12 +104,11 @@ function App() {
               color: 'text.primary',
               height: '100%',
               minHeight: '100vh',
-              paddingBottom: '350px',
             }}
           >
             <Stack direction="column" sx={{ alignItems: 'center' }}>
               <MainNav />
-              <Stack >
+              <Stack>
                 <Routing />
               </Stack>
             </Stack>
