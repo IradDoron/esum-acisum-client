@@ -58,7 +58,9 @@ function RenderCourse() {
             <StyledCourseDescription variant="h4">{courseData?.courseDescription}</StyledCourseDescription>
           </Paper>
           <Paper variant="outlined" sx={{ flexWrap: 'wrap', padding: '100px 30px' }}>
-            <StyledChapterTitle variant="h3">{`${'פרק'}${' '}${chapter?.split('-')[1]}`}</StyledChapterTitle>
+            <StyledChapterTitle variant="h3">{`${'פרק'}${' '}${
+              Number(chapter?.split('-')[1]) + 1
+            }`}</StyledChapterTitle>
             <StyledChapterTitle variant="h3">
               {courseData?.chapters[Number(chapter?.split('-')[1])]?.chapterTitle}
             </StyledChapterTitle>
@@ -82,7 +84,7 @@ function RenderCourse() {
           >
             <Paper variant="outlined" sx={{ flexWrap: 'wrap', margin: '0 0 50px 0', padding: '30px' }}>
               <Typography sx={{ textAlign: 'center' }} variant="h3">
-                {`${'שיעור'}${' '}${lesson?.split('-')[1]}`}
+                {`${'שיעור'}${' '}${Number(lesson?.split('-')[1]) + 1}`}
               </Typography>
 
               <Typography sx={{ textAlign: 'center' }} variant="h3">
